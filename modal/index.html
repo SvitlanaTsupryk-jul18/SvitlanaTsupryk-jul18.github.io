@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+        //Jquery это
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Registratoin, please</h1>
+    </header>
+    <div>
+        <button id="registration"> Join!</button>
+    </div>
+    <div class="modal">
+        <input type="text" name="name" placeholder="Name"><br>
+        <button id="close">Thank you!</button>
+    </div>
+
+    <script>
+        function show() {
+            document.querySelector(".modal").classList.remove("hide");
+            document.querySelector(".modal").classList.add("show");
+
+            document.querySelector("#registration").classList.remove("show");
+            document.querySelector("#registration").classList.add("hide");
+        }
+
+        function hide() {
+            document.querySelector(".modal").classList.replace("show", "hide");
+            document.querySelector("#registration").classList.replace("hide", "show");
+        }
+
+        document.querySelector("#registration").addEventListener("click", show);
+
+        document.querySelector("#close").addEventListener("click", hide);
+    </script>
+
+
+</body>
+
+</html>
