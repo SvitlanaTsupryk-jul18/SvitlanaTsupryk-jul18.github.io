@@ -223,7 +223,12 @@
                 padding: 40px 0;
                 border: none;
             }
-           
+           .brands img:after {
+                content: '';
+                width: 1px;
+                height: 100%;
+                background-color: #262626;
+            }
            
             
             .speaker {
