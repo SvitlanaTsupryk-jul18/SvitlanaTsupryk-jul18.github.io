@@ -1,1 +1,1 @@
-[My Event Website](SvitlanaTsupryk-jul18.github.io/EventWebsite/index.html)
+[My Event Website](https://svitlanatsupryk-jul18.github.io/EventWebsite/index.html)
