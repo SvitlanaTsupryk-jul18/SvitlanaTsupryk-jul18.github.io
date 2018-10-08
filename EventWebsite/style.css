@@ -1,696 +1,890 @@
-            @font-face {
-                font-family: MyriadPro;
-                /* Имя шрифта */
-                src: url(fonts/MyriadPro/MyriadPro-Regular.otf);
-                /* Путь к файлу со шрифтом */
-                font-weight: normal;
-                font-style: normal;
+    @font-face {
+        font-family: MyriadPro;
+        /* Имя шрифта */
+        src: url(fonts/MyriadPro/MyriadPro-Regular.otf);
+        /* Путь к файлу со шрифтом */
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    font-family: 'Open Sans',
+    sans-serif;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    body {
+        max-width: 1368px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #f8f4f4;
+        padding: 45px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+    
+    h1 {
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 25pt;
+        margin: 0;
+        width: 20%;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline-block;
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 14pt;
+        padding: 10px 11px;
+        border-radius: 2px;
+        transition: all 0.5s;
+    }
+    
+    nav li:hover {
+        background-color: #03a9f4;
+    }
+    
+    nav a {
+        color: black;
+    }
+    
+    nav a:hover {
+        color: white;
+    }
+    
+    section.slide {
+        background-image: url(images/main2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        max-height: 765px;
+        padding: 10%;
+    }
+    
+    .slide h2 {
+        margin: auto;
+        font-family: 'Open Sans Bold', sans-serif;
+        font-size: 50pt;
+        color: white;
+    }
+    
+    .slide h3 {
+        font-family: 'Open Sans Semiold', sans-serif;
+        font-size: 30pt;
+        color: white;
+    }
+    
+    #clockdiv {
+        font-family: 'Open Sans Bold', sans-serif;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    #clockdiv>div {
+        padding: 10px;
+        font-size: 14pt;
+        display: inline-block;
+    }
+    
+    #clockdiv div>span {
+        font-size: 30pt;
+        display: inline-block;
+    }
+    
+    center button {
+        background: none;
+        background-size: cover;
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 15pt;
+        color: white;
+        padding: 20px 30px;
+        border: 1px white solid;
+        margin-right: 20px;
+        border-radius: 2px;
+        transition: all 0.5s;
+    }
+    
+    center button:hover {
+        background-color: #03a9f4;
+        opacity: 0.8;
+    }
+    
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .about div {
+        padding: 10%;
+        width: 50%;
+    }
+    
+    .about h2 {
+        font-family: Open Sans Bold, sans-serif;
+        font-size: 30pt;
+    }
+    
+    .about article {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13pt;
+    }
+    
+    .about p {
+        margin-top: 30px;
+    }
+    
+    video {
+        position: relative;
+        z-index: -1;
+        max-width: 100%;
+    }
+    
+    .controls {
+        margin-top: -35%;
+        margin-bottom: 20%;
+        color: white;
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 30pt;
+    }
+    
+    .controls button {
+        background-image: url(images/play\ icon.png);
+        background-color: none;
+        border: none;
+        width: 75px;
+        height: 75px;
+    }
+    
+    .cont {
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .cont a {
+        background-image: url(images/cercle.png);
+        color: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 34px;
+    }
+    
+    .cont h3 {
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 13pt;
+        color: black;
+        margin-top: 65px;
+    }
+    
+    .cont p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13pt;
+        color: #666666;
+    }
+    
+    .statistics {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 100px 50px 50px 50px;
+        background-color: #f8f8f8;
+    }
+    
+    .brands {
+        margin-bottom: 70px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 80px 1fr;
+        grid-gap: 0px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #hol {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border: none;
+    }
+    
+    .speaker {
+        text-align: center;
+        background-color: #343131;
+        padding: 50px;
+        font-family: 'Open Sans Semibold', sans-serif;
+        color: white;
+    }
+    
+    .speaker h2 {
+        font-size: 30pt;
+    }
+    
+    .fimg img {
+        zoom: 90%;
+    }
+    
+    .speaker img:hover {
+        opacity: 0.5;
+    }
+    
+    .fimg:hover .fotoinfo {
+        visibility: visible;
+    }
+    
+    .foto {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .fimg {
+        position: relative;
+    }
+    
+    .fotoinfo {
+        font-size: 13pt;
+        visibility: hidden;
+        text-align: left;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        width: 60%;
+        line-height: 0.9;
+    }
+    
+    .fotoinfo a {
+        color: white;
+        margin: 10px;
+    }
+    
+    .fotoinfo a:hover {
+        color: #29cadf;
+    }
+    
+    .purchase {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        background-color: #f8f8f8;
+        position: relative;
+        padding: 100px 0px;
+        width: 100%;
+    }
+    
+    .purchase h2,
+    .blog h2,
+    .book h2 {
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 30pt;
+        color: black;
+    }
+    
+    .time {
+        position: relative;
+        box-sizing: border-box;
+        padding: 70px 0;
+    }
+    
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .page::before {
+        content: '';
+        width: 2px;
+        /* толщина линии	*/
+        background: #eaeaea;
+        height: 100%;
+        /*	растягиваем по высоте*/
+        position: absolute;
+        /*	задаём абсолютное позиционирование чтобы линия не меняла свое положение*/
+        left: 50%;
+        top: 0;
+        margin-left: -1px;
+        /* отрицательный отсуп равный половине толщины линии. Без него она будет отображаться не ровно посередине, а как бы сразу за ней. Хорошо видно когда толщина линии большая */
+    }
+    
+    .page figcaption {
+        padding: 0 20px;
+        text-align: left;
+        border: 0;
+    }
+    
+    .page figcaption p {
+        font-size: 13pt;
+        color: #666666;
+    }
+    
+    .page figure {
+        background-color: white;
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px;
+        width: 70%;
+    }
+    
+    .page figcaption h3 {
+        font-size: 15pt;
+    }
+    
+    .page figure img {
+        max-width: 100%;
+    }
+    
+    .coll {
+        width: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .coll:nth-of-type(even) {
+        transform: translateX(100%);
+        /* это свойство переносит блок на 100%его ширины по горизонтали (оси X)	*/
+    }
+    
+    .lector {
+        position: absolute;
+        right: 0;
+        /* прижимает кружок к справой стороне блока	*/
+        top: 30%;
+        transform: translate(50%, -50%);
+        /*двигает кружок на половину его ширины по оси x - получается ровно посередине по горизонтали - прямо на линии и поднимает на 50% по оси y - тот же прикол, что и с линией.*/
+    }
+    
+    .coll:nth-of-type(even) .lector {
+        right: auto;
+        /* без этого кружок растнется нв весь блок - будут действовать right:0 и left:0 одновременно	*/
+        left: 0;
+        transform: translate(-50%, -50%);
+        /* немножко меняется отображение относительно линиии	*/
+    }
+    
+    .microphone_icon {
+        font-size: 24px;
+        font-family: "FontAwesome";
+        color: rgb(255, 255, 255);
+        line-height: 1;
+        text-align: center;
+        -moz-transform: matrix( 0.99942163100058, 0, 0, 1, 0, 0);
+        -webkit-transform: matrix( 0.99942163100058, 0, 0, 1, 0, 0);
+        -ms-transform: matrix( 0.99942163100058, 0, 0, 1, 0, 0);
+        position: absolute;
+        left: 1094.45px;
+        top: 1663.997px;
+        width: 11.775px;
+        height: 16.706px;
+        z-index: 243;
+    }
+    
+    .coll img:hover {
+        opacity: 0.5;
+        background-color: #03a9f4;
+    }
+    
+    .purchase button {
+        background: none;
+        background-size: cover;
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 13pt;
+        padding: 15px 30px;
+        border: 1px #eaeaea solid;
+        margin-right: 1px;
+        margin-top: 50px;
+    }
+    
+    .purchase button:hover {
+        background-color: #03a9f4;
+        color: white;
+    }
+    
+    .signup {
+        background-image: url(images/take.png);
+        background-size: cover;
+        max-width: 100%;
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 20pt;
+        color: white;
+    }
+    
+    .hurry {
+        padding: 60px 100px;
+    }
+    
+    .hurry button {
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 13pt;
+        padding: 15px 30px;
+        background-color: #03a9f4;
+        color: white;
+        border: none;
+        margin-left: 200px;
+    }
+    
+    .hurry button:hover {
+        border: 1px white solid;
+    }
+    
+    .blog {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .wrblog {
+        display: flex;
+        justify-content: space-around;
+        color: #999999;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13pt;
+        margin: 50px 0 100px 0;
+    }
+    
+    .blog h3 {
+        font-family: 'Open Sans Semibold', sans-serif;
+        font-size: 15pt;
+        color: black;
+    }
+    
+    .wrblog article {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        flex-wrap: wrap;
+    }
+    
+    .wrblog img {
+        max-width: 100%;
+    }
+    
+    figcaption {
+        border-bottom: 1px #eaeaea solid;
+    }
+    
+    .wrblog article p {
+        padding: 0 40px;
+        margin: 0;
+    }
+    
+    .book {
+        background-color: #f8f8f8;
+        width: 100%;
+        color: #999999;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13pt;
+        display: flex;
+    }
+    
+    #seet {
+        float: left;
+        max-width: 50%;
+    }
+    
+    .booking {
+        padding: 30px;
+    }
+    
+    #mail {
+        height: 40px;
+        width: 250px;
+        border: 1px #f1f1f1 solid;
+        padding-left: 10px;
+    }
+    
+    #mail:first-child {
+        margin-right: 20px;
+    }
+    
+    #subj {
+        height: 40px;
+        max-width: 534px;
+        border: 1px #f1f1f1 solid;
+        padding-left: 10px;
+    }
+    
+    textarea {
+        height: 160px;
+        max-width: 534px;
+        border: 1px #f1f1f1 solid;
+        padding-left: 10px;
+    }
+    
+    #submit {
+        height: 40px;
+        max-width: 165px;
+        background-color: #03a9f4;
+        color: white;
+        border: none;
+    }
+    
+    .maps img {
+        max-width: 100%;
+    }
+    
+    .footer1 {
+        background-color: #333333;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13pt;
+        color: #7e7e7e;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .rights {
+        background-color: #262626;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 100px;
+        color: #7e7e7e;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13pt;
+    }
+    
+    footer h3 {
+        color: white;
+    }
+    
+    footer a {
+        color: #7e7e7e;
+    }
+    
+    footer li {
+        font-family: ' Open Sans', sans-serif;
+        font-size: 12pt;
+    }
+    
+    .rights a:hover {
+        color: #03a9f4;
+    }
+    
+    nav input {
+        height: 40px;
+        max-width: 200px;
+        background-color: #595959;
+        color: white;
+        border: none;
+        padding-left: 10px;
+    }
+    
+    #news {
+        height: 40px;
+        width: 40px;
+        background-color: #29cadf;
+        color: white;
+        border: none;
+    }
+    
+    #newsletter p {
+        width: 280px;
+    }
+    
+    @media screen and (max-width: 900px) {
+        header {
+            padding: 5%;
+        }
+        header ul,
+        .purchase {
+            padding: 0;
+            margin: 0;
+        }
+        .slide,
+        .footer1 {
+            padding: 0;
+        }
+        .slide h2,
+        .purchase h2 {
+            font-size: 2em;
+        }
+        .slide h3,
+        .controls h2 {
+            font-size: 1.2em;
+        }
+        .about div {
+            padding: 0% 5%;
+        }
+        .statistics,
+        .cont {
+            padding: 5%;
+        }
+        .controls {
+            margin-bottom: 10%;
+        }
+        .brands {
+            margin-bottom: 3%;
+            grid-template-rows: 1fr 1fr;
+        }
+        #hol {
+            display: none;
+        }
+        .fimg img {
+            zoom: 50%;
+        }
+        .fotoinfo {
+            visibility: visible;
+            color: #343131;
+            width: 100%;
+        }
+        .fotoinfo .fa {
+            color: #343131;
+        }
+        .fotoinfo p,
+        .fotoinfo h3,
+        .footer1 ul {
+            margin: 0;
+        }
+        #newsletter p,
+        #inp {
+            width: 150px;
+            padding: 0;
+        }
+        .wrblog figure {
+            margin: 10px;
+        }
+        .wrblog figcaption p {
+            padding: 0px;
+        }
+    }
+    
+    @media screen and (max-width:768px) {
+        /* Target landscape smartphones, portrait tablets, narrow desktops   */
+        .footer1,
+        .rights {
+            flex-wrap: wrap;
+        }
+        .book img,
+        .about img,
+        .purchase {
+            display: none;
+        }
+        section.slide {
+            background-size: cover;
+        }
+        .about div {
+            width: 100%;
+        }
+        .about h2,
+        .speaker h2 {
+            font-size: 2em;
+        }
+        #play-pause {
+            visibility: hidden;
+        }
+        .fimg img {
+            zoom: 80%;
+        }
+        .foto {
+            margin-left: 20%;
+        }
+        .wrblog article p {
+            padding: 10px;
+            line-height: 1;
+        }
+        .wrblog {
+            margin-bottom: 0;
+        }
+    }
+    
+    @media screen and (max-width:567px) {
+        .wrblog {
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+        #play-pause {
+            display: none;
+        }
+        .brands {
+            padding-top: 5%;
+        }
+        .brands img {
+            width: 70%;
+        }
+        .foto {
+            margin-left: 15%;
+        }
+        #newsletter p {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (min-width:320px) and (max-width:479px) {
+        .fimg img {
+            zoom: 60%;
+        }
+        .slide h2,
+        .about h2,
+        .project h2,
+        .blog h2,
+        .book h2,
+        .speaker h2,
+        .controls {
+            font-size: 1.5em;
+        }
+        .foto {
+            margin-left: 0;
+        }
+        .hurry {
+            padding: 10%;
+        }
+        .hurry button {
+            margin: 10px auto;
+        }
+        .rights {
+            padding: 20px;
+        }
+        .footer1 ul {
+            padding: 10px 20px;
+        }
+        .booking {
+            display: none;
+        }
+        .footer1 h3 {
+            margin: 0;
+        }
+    }
+    /*
+        @media screen and (min-width:480px) and (max-width:568px) {
+            .book img,
+            .about img {
+                display: none;
             }
-            
-            font-family: 'Open Sans',
-            sans-serif;
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            
-            ul {
-                list-style: none;
-            }
-            
-            a {
-                text-decoration: none;
-            }
-            
-            body {
-                max-width: 1368px;
-                margin: 0;
-            }
-            
-            header {
-                background-color: #f8f4f4;
-                padding: 45px 100px;
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
-                flex-wrap: wrap;
-            }
-            
-            h1 {
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 25pt;
-                margin: 0;
-                width: 20%;
-            }
-            
-            nav {
-                display: flex;
-                justify-content: flex-end;
-                margin: 0;
-                padding: 0;
-            }
-            
-            nav li {
-                display: inline-block;
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 14pt;
-                padding: 10px 11px;
-            }
-            
-            nav li:hover {
-                background-color: #03a9f4;
-            }
-            
-            nav a {
-                color: black;
-            }
-            
-            nav a:hover {
-                color: white;
-            }
-            
-            section.slide {
-                background-image: url(images/main2.png);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                max-height: 765px;
-                padding: 10%;
-            }
-            
-            .slide h2 {
-                margin: auto;
-                font-family: 'Open Sans Bold', sans-serif;
-                font-size: 50pt;
-                color: white;
-            }
-            
-            .slide h3 {
-                font-family: 'Open Sans Semiold', sans-serif;
-                font-size: 30pt;
-                color: white;
-            }
-            
-            #clockdiv {
-                font-family: 'Open Sans Bold', sans-serif;
-                color: white;
-                display: inline-block;
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            
-            #clockdiv>div {
-                padding: 10px;
-                font-size: 14pt;
-                display: inline-block;
-            }
-            
-            #clockdiv div>span {
-                font-size: 30pt;
-                display: inline-block;
-            }
-            
-            center button {
-                background: none;
-                background-size: cover;
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 15pt;
-                color: white;
-                padding: 20px 30px;
-                border: 1px white solid;
-                margin-right: 20px;
-            }
-            
-            center button:hover {
-                background-color: #03a9f4;
-            }
-            
-            .about {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            
-            .about div {
-                padding: 10%;
-                width: 50%;
-            }
-            
-            .about h2 {
-                font-family: Open Sans Bold, sans-serif;
-                font-size: 30pt;
-            }
-            
-            .about article {
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13pt;
-            }
-            
-            .about p {
-                margin-top: 30px;
-            }
-            
-            video {
-                position: relative;
-                z-index: -1;
-                max-width: 100%;
-            }
-            
-            .controls {
-                margin-top: -35%;
-                margin-bottom: 20%;
-                color: white;
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 30pt;
-            }
-            
-            .controls button {
-                background-image: url(images/play\ icon.png);
-                background-color: none;
-                border: none;
-                width: 75px;
-                height: 75px;
-            }
-            
-            .cont {
-                text-align: center;
-            }
-            
-            .cont a {
-                background-image: url(images/cercle.png);
-                color: white;
-                background-position: center;
-                background-repeat: no-repeat;
-                padding: 34px;
-            }
-            
-            .cont h3 {
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 13pt;
-                color: black;
-                margin-top: 65px;
-            }
-            
-            .cont p {
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13pt;
-                color: #666666;
-            }
-            
-            .statistics {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                flex-wrap: wrap;
-                padding: 100px 50px 50px 50px;
-                background-color: #f8f8f8;
-            }
-            
-            .brands {
-                margin-bottom: 70px;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows:  1fr 80px 1fr;
-                grid-gap: 0px;
-                justify-items: center;
-                align-items: center;
-            }
-            
-            #hol {
-                grid-column-start: 1;
-                grid-column-end: span 3;
-                grid-row-start: 2;
-                grid-row-end: 3;
-                border: none;
-            }
-           
-            
-            .speaker {
-                text-align: center;
-                background-color: #343131;
-                padding: 50px;
-                font-family: 'Open Sans Semibold', sans-serif;
-                color: white;
-            }
-            
             .speaker h2 {
-                font-size: 30pt;
+                font-size: 1em;
+                margin: 0;
             }
-            
-            .fimg img {
-                zoom: 90%;
+            header {
+                padding: 15px 30px;
             }
-            
-            .speaker img:hover {
-                opacity: 0.5;
+            .slide {
+                background-color: #7e7e7e;
             }
-            
-            .fimg:hover .fotoinfo {
-                visibility: visible;
+            nav li {
+                padding: 5px;
             }
-            
-            .foto {
-                margin-top: 60px;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-            
-            .fimg {
-                position: relative;
-            }
-            
-            .fotoinfo {
-                font-size: 13pt;
-                visibility: hidden;
-                text-align: left;
-                position: absolute;
-                bottom: 5%;
-                left: 5%;
-                width: 60%;
-                line-height: 0.9;
-            }
-            
-            .fotoinfo a {
-                color: white;
-                margin: 10px;
-            }
-            
-            .fotoinfo a:hover {
-                color: #29cadf;
-            }
-            
-            .purchase {
-                font-family: 'Open Sans', sans-serif;
-                text-align: center;
-                background-color: #f8f8f8;
-                position: relative;
-                padding: 100px 0px;
-                width: 100%;
-            }
-            
-            .purchase h2,
+            .slide h2,
+            .about h2,
+            .project h2,
             .blog h2,
             .book h2 {
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 30pt;
-                color: black;
-            }
-            
-            .time {
-                position: relative;
-                box-sizing: border-box;
-                padding: 70px 0;
-            }
-            
-            .page {
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .page::before {
-                content: '';
-                width: 2px;
-                /* толщина линии	*/
-                background: #eaeaea;
-                height: 100%;
-                /*	растягиваем по высоте*/
-                position: absolute;
-                /*	задаём абсолютное позиционирование чтобы линия не меняла свое положение*/
-                left: 50%;
-                top: 0;
-                margin-left: -1px;
-                /* отрицательный отсуп равный половине толщины линии. Без него она будет отображаться не ровно посередине, а как бы сразу за ней. Хорошо видно когда толщина линии большая */
-            }
-            
-            .page figcaption {
-                padding: 0 20px;
-                text-align: left;
-                border: 0;
-            }
-            
-            .page figcaption p {
-                font-size: 13pt;
-                color: #666666;
-            }
-            
-            .page figure {
-                background-color: white;
-                position: relative;
-                box-sizing: border-box;
-                padding: 20px;
-                width: 70%;
-            }
-            
-            .page figcaption h3 {
-                font-size: 15pt;
-            }
-            
-            .page figure img {
-                max-width: 100%;
-            }
-            
-            .coll {
-                width: 50%;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .coll:nth-of-type(even) {
-                transform: translateX(100%);
-                /* это свойство переносит блок на 100%его ширины по горизонтали (оси X)	*/
-            }
-            
-            .lector {
-                position: absolute;
-                right: 0;
-                /* прижимает кружок к справой стороне блока	*/
-                top: 30%;
-                transform: translate(50%, -50%);
-                /*двигает кружок на половину его ширины по оси x - получается ровно посередине по горизонтали - прямо на линии и поднимает на 50% по оси y - тот же прикол, что и с линией.*/
-            }
-            
-            .coll:nth-of-type(even) .lector {
-                right: auto;
-                /* без этого кружок растнется нв весь блок - будут действовать right:0 и left:0 одновременно	*/
-                left: 0;
-                transform: translate(-50%, -50%);
-                /* немножко меняется отображение относительно линиии	*/
-            }
-            
-            .coll img:hover {
-                opacity: 0.5;
-                background-color: #03a9f4;
-            }
-            
-            .purchase button {
-                background: none;
-                background-size: cover;
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 13pt;
-                padding: 15px 30px;
-                border: 1px #eaeaea solid;
-                margin-right: 1px;
-                margin-top: 50px;
-            }
-            
-            .purchase button:hover {
-                background-color: #03a9f4;
-                color: white;
-            }
-            
-            .signup {
-                background-image: url(images/take.png);
-                background-size: cover;
-                max-width: 100%;
-                font-family: 'Open Sans Semibold', sans-serif;
                 font-size: 20pt;
-                color: white;
             }
-            
-            .hurry {
-                padding: 60px 100px;
-            }
-            
-            .hurry button {
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 13pt;
-                padding: 15px 30px;
-                background-color: #03a9f4;
-                color: white;
-                border: none;
-                margin-left: 200px;
-            }
-            
-            .hurry button:hover {
-                border: 1px white solid;
-            }
-            
+            .slide h3,
             .blog {
-                text-align: center;
+                font-size: 13pt;
+            }
+            .about div {
+                padding: 10%;
                 width: 100%;
             }
-            
+            .statistics,
+            .hurry {
+                padding: 20px;
+            }
+            .cont {
+                margin-top: 40px;
+            }
             .wrblog {
-                display: flex;
-                justify-content: space-around;
-                color: #999999;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13pt;
-                margin: 50px 0 100px 0;
-            }
-            
-            .blog h3 {
-                font-family: 'Open Sans Semibold', sans-serif;
-                font-size: 15pt;
-                color: black;
-            }
-            
-            .wrblog article {
-                display: flex;
-                flex-direction: column;
-                text-align: justify;
+                margin: 0%;
                 flex-wrap: wrap;
             }
-            
-            .wrblog img {
-                max-width: 100%;
-            }
-            
-            figcaption {
-                border-bottom: 1px #eaeaea solid;
-            }
-            
-            .wrblog article p {
-                padding: 0 40px;
-                margin: 0;
-            }
-            
-            .book {
-                background-color: #f8f8f8;
-                width: 100%;
-                color: #999999;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13pt;
-                display: flex;
-            }
-            
-            #seet {
-                float: left;
-                max-width: 50%;
-            }
-            
-            .booking {
-                padding: 30px;
-            }
-            
-            #mail {
-                height: 40px;
-                width: 250px;
-                border: 1px #f1f1f1 solid;
-                padding-left: 10px;
-            }
-            
-            #mail:first-child {
-                margin-right: 20px;
-            }
-            
-            #subj {
-                height: 40px;
-                max-width: 534px;
-                border: 1px #f1f1f1 solid;
-                padding-left: 10px;
-            }
-            
-            textarea {
-                height: 160px;
-                max-width: 534px;
-                border: 1px #f1f1f1 solid;
-                padding-left: 10px;
-            }
-            
-            #submit {
-                height: 40px;
-                max-width: 165px;
-                background-color: #03a9f4;
-                color: white;
-                border: none;
-            }
-            
-            .maps img {
-                max-width: 100%;
-            }
-            
-            .footer1 {
-                background-color: #333333;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13pt;
-                color: #7e7e7e;
-                padding: 50px;
-                display: flex;
-                justify-content: space-between;
-            }
-            
+            .footer1,
             .rights {
-                background-color: #262626;
-                display: flex;
-                justify-content: space-between;
-                padding: 15px 100px;
-                color: #7e7e7e;
-                font-family: 'Open Sans', sans-serif;
-                font-size: 13pt;
+                flex-wrap: wrap;
+                padding: 40px;
             }
-            
-            footer h3 {
-                color: white;
-            }
-            
-            footer a {
-                color: #7e7e7e;
-            }
-            
-            footer li {
-                font-family: ' Open Sans', sans-serif;
-                font-size: 12pt;
-            }
-            
-            .rights a:hover {
-                color: #03a9f4;
-            }
-            
-            nav input {
-                height: 40px;
-                max-width: 200px;
-                background-color: #595959;
-                color: white;
-                border: none;
-                padding-left: 10px;
-            }
-            
-            #news {
-                height: 40px;
-                width: 40px;
-                background-color: #29cadf;
-                color: white;
-                border: none;
-            }
-            
-            #newsletter p {
-                width: 280px;
-            }
-            
-            @media screen and (min-width: 768px) and (max-width: 900px) {
-                .footer1 {
-                    flex-wrap: wrap;
-                }
-            }
-            
-            @media screen and (min-width:568px) and (max-width:768px) {
-                /* Target landscape smartphones, portrait tablets, narrow desktops   */
-                .footer1,
-                .rights {
-                    flex-wrap: wrap;
-                }
-                .book img {
-                    display: none;
-                }
-            }
-            
-            @media screen and (min-width:480px) and (max-width:568px) {
-                .book img,
-                .about img {
-                    display: none;
-                }
-                header {
-                    padding: 15px 30px;
-                }
-                .slide {
-                    background-color: #7e7e7e;
-                }
-                nav li {
-                    padding: 5px;
-                }
-                .slide h2,
-                .about h2,
-                .project h2,
-                .blog h2,
-                .book h2 {
-                    font-size: 20pt;
-                }
-                .slide h3,
-                .blog {
-                    font-size: 13pt;
-                }
-                .about div {
-                    padding: 10%;
-                    width: 100%;
-                }
-                .statistics,
-                .hurry {
-                    padding: 20px;
-                }
-                .cont {
-                    margin-top: 40px;
-                }
-                .wrblog {
-                    margin: 0%;
-                    flex-wrap: wrap;
-                }
-                .footer1,
-                .rights {
-                    flex-wrap: wrap;
-                    padding: 40px;
-                }
-            }
-            
-            @media screen and (min-width:320px) and (max-width:479px) {
-                /* Target portrait smartphones */
-                .book img,
-                .about img,
-                .purchase {
-                    display: none;
-                }
-                header {
-                    padding: 15px 30px;
-                }
-                .slide {
-                    background-color: #7e7e7e;
-                }
-                nav li {
-                    padding: 5px;
-                }
-                .slide h2,
-                .about h2,
-                .project h2,
-                .blog h2,
-                .book h2 {
-                    font-size: 20pt;
-                }
-                .slide h3,
-                .blog {
-                    font-size: 13pt;
-                }
-                .about div {
-                    padding: 10%;
-                    width: 100%;
-                }
-                .statistics,
-                .hurry {
-                    padding: 20px;
-                }
-                .cont {
-                    margin-top: 40px;
-                }
-                .wrblog {
-                    margin: 0%;
-                    flex-wrap: wrap;
-                }
-                .footer1,
-                .rights {
-                    flex-wrap: wrap;
-                    padding: 40px;
-                }
-                .fimg img {
-                    max-width: 100%;
-                }
-            }
+        }
+        
+        @media screen and (min-width:320px) and (max-width:479px) {
+            /* Target portrait smartphones */
+    /* .book img,
+    .about img,
+    .purchase {
+        display: none;
+    }
+    
+    header {
+        padding: 15px 30px;
+    }
+    
+    .slide {
+        background-color: #7e7e7e;
+    }
+    
+    nav li {
+        padding: 5px;
+    }
+    
+    .slide h2,
+    .about h2,
+    .project h2,
+    .blog h2,
+    .book h2 {
+        font-size: 20pt;
+    }
+    
+    .slide h3,
+    .blog {
+        font-size: 13pt;
+    }
+    
+    .about div {
+        padding: 10%;
+        width: 100%;
+    }
+    
+    .statistics,
+    .hurry {
+        padding: 20px;
+    }
+    
+    .cont {
+        margin-top: 40px;
+    }
+    
+    .wrblog {
+        margin: 0%;
+        flex-wrap: wrap;
+    }
+    
+    .footer1,
+    .rights {
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+    
+    .fimg img {
+        max-width: 100%;
+    }
+    
+    #newsletter,
+    .booking {
+        display: none;
+    }
+    
+    #pla-pause {
+        height: 1em;
+    }
+}
